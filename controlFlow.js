@@ -175,18 +175,86 @@
 
 // Print objects property value and name if string
 
-function showProperty(obj){
-    for(let key in obj){
-        if(typeof obj[key] === 'string'){
-            console.log(key, obj[key])
+// function showProperty(obj){
+//     for(let key in obj){
+//         if(typeof obj[key] === 'string'){
+//             console.log(key, obj[key])
+//         }
+//     }
+// }
+
+// const movie = {
+//     title: 'a',
+//     year: 2012,
+//     des: 'afa'
+// }
+
+// showProperty(movie)
+
+
+// Sum of multiple of 3 & 5
+
+// function sum(n){
+//     let total=0;
+//     for(i=1; i<=n; i++){
+//         if((i%3===0)|| (i%5===0)){
+//             total+=i;
+//         }
+//     }
+//     return total;
+// }
+
+// console.log(sum(5))
+
+// Calculate grades of a student
+
+// const marks = [70,50,50]
+
+// function calGrade(marks){
+//     let grade, avgMarks=0, totalMarks=0;
+//     for(i=0; i<marks.length; i++){
+//         totalMarks += marks[i];
+//     }
+//     avgMarks = totalMarks/marks.length
+//     if(avgMarks<50){
+//         return 'Fail';
+//     } else{
+//         return 'Pass';
+//     }
+// }
+
+// console.log(calGrade(marks))
+
+
+// Print stars
+
+// function showStars(rows){
+//     for(let row = 1; row <= rows; row++){
+//         let pattern = '';
+//         for (let i=0; i<row; i++){
+//             pattern += '*';
+//         }
+//         console.log(pattern)
+//     }
+// }
+
+// showStars(10)
+
+// Prime number
+
+function showprime(n){
+    for(let i=2;i<=n;i++){
+        isprime=true;
+        for(let j=2;j<i;j++){
+            if(i%j===0){
+                isprime=false;
+                break;
+            }
+        }
+        if(isprime){
+            console.log(i);
         }
     }
 }
 
-const movie = {
-    title: 'a',
-    year: 2012,
-    des: 'afa'
-}
-
-showProperty(movie)
+showprime(100)
